@@ -1,0 +1,70 @@
+body {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(to right, #ffb476, #ff74e3);
+   height: 100vh; /* Adjusted to 100vh for better mobile experience */
+}
+
+h1, h2 {
+   margin: 0;
+   font-weight: 700;
+   font-size: 1.5rem; /* Adjusted font size for better readability on mobile */
+}
+
+.header {
+   text-align: center;
+   margin-bottom: 10px; /* Reduced margin for better spacing on mobile */
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.5s, transform 0.5s;
+}
+
+.container {
+   width: 50%; /* Adjusted width for better fit on smaller screens */
+   height: auto;
+   padding: 15px; /* Reduced padding for better spacing on mobile */
+   box-sizing: border-box;
+   text-align: center;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.5s, transform 0.5s;
+   margin-bottom: 10px; /* Reduced margin for better spacing on mobile */
+   text-decoration: none;
+   color: inherit;
+   border-radius: 20px;
+   font-size: medium
+
+
+}
+
+.container.active, .header.active {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.container:nth-child(odd) {
+   background-color: #bef2ffb7;
+}
+
+.container:nth-child(even) {
+   background-color: #87cefacb;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+   .container {
+       width: 90%;
+   }
+}
+
+@media only screen and (max-width: 600px) {
+   .header, .container {
+       width: 100%;
+   }
+}
