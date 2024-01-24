@@ -20,16 +20,17 @@
             background: linear-gradient(to right, #ffb476, #ff74e3);
         }
 
-        h1{
+        h1 {
             margin: 0;
             font-weight: 700;
             color: antiquewhite;
         }
+
         h2 {
             margin: 0;
             font-weight: 500;
             color: antiquewhite;
-        } 
+        }
 
         .header {
             text-align: center;
@@ -75,6 +76,15 @@
         #motivation {
             background: url("./img/Manifestation\ Wallpaper.jpeg") center/cover; /* Replace with actual image URL */
         }
+
+        .help-link {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: antiquewhite;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -103,6 +113,8 @@
         <h2>Motivation</h2>
         <p>Inspirational videos to keep you motivated...</p>
     </a>
+
+    <div class="help-link" onclick="openHelp()">Help?</div>
 
     <script>
         function isElementInViewport(el) {
@@ -139,6 +151,10 @@
 
         // Listen for scroll events and check visibility
         window.addEventListener('scroll', handleScroll);
+
+        function openHelp() {
+            alert("Bel 06-40252528 voor onze uiterste klantenservice!");
+        }
     </script>
 </body>
 
