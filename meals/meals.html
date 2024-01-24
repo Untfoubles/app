@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Recipes Hub</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -31,24 +29,24 @@
         }
 
         .slideshow-container {
-            max-width: 60%;
-            margin: auto;
-            position: relative;
+            display: flex;
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
             overflow: hidden;
-            border-radius: 10px;
         }
 
         .mySlides {
-            display: none;
+            display: flex;
             animation: fadeInOut 8s infinite alternate;
         }
 
         .mySlides img {
-            max-width: 50%;
+            width: 200px; /* Adjust the value as needed */
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
             cursor: pointer;
-            float: left; /* Added to display images side by side */
+            margin-right: 10px; /* Add spacing between images */
         }
 
         @keyframes fadeInOut {
@@ -121,7 +119,7 @@
 </head>
 <body>
     <header>
-        <h1>Recipes for a Healthier You</h1>
+        <h1>Feel good meals</h1>
     </header>
 
     <div class="personal-goals">
@@ -131,20 +129,15 @@
 
     <div class="slideshow-container">
         <div class="mySlides">
-            <a href="#salad"><img src="img/cake.jpeg" alt="Salad"></a>
-            <a href="#salad"><img src="img/patlican.jpeg" alt="Salad"></a>
+            <img src="https://placekitten.com/200/200" alt="Healthy Salad">
+            <img src="https://placekitten.com/201/201" alt="Fruit Smoothie">
         </div>
-        <div class="mySlides">
-            <a href="#smoothie"><img src="img/bagel.jpeg" alt="Smoothie"></a>
-            <a href="#smoothie"><img src="img/wrap.jpeg" alt="Smoothie"></a>
-        </div>
+    </div>
 
-
-        <div class="recipe-links">
-            <a href="#salad" class="recipe-link">Healthy Salads</a>
-            <a href="#smoothie" class="recipe-link">Fruit Smoothies</a>
-            <!-- Add more links as needed -->
-        </div>
+    <div class="recipe-links">
+        <a href="#salad" class="recipe-link">Healthy Salads</a>
+        <a href="#smoothie" class="recipe-link">Fruit Smoothies</a>
+        <!-- Add more links as needed -->
     </div>
 
     <div class="recipes-section">
@@ -196,7 +189,7 @@
             if (slideIndex > slides.length) {
                 slideIndex = 1;
             }
-            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex - 1].style.display = "flex";
             setTimeout(showSlides, 5000); // Change slide every 5 seconds
         }
     </script>
