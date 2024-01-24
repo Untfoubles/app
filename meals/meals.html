@@ -19,10 +19,15 @@
             font-size: 1em; /* Adjusted font size for better visibility on smaller screens */
             font-weight: 400;
         }
+        H2 {
+            font-style: italic;
+            color: #c7dcff;
 
+        }
         .personal-goals {
             text-align: center;
             padding: 20px;
+            color: antiquewhite;
         }
 
         .slideshow-container {
@@ -36,12 +41,13 @@
         }
 
         .mySlides img {
-            width: 100%; /* Adjusted width to be responsive */
-            max-width: 300px; /* Adjust the value as needed */
+            width: 100%;
+            max-width: 300px;
             height: auto;
             border-radius: 10px;
             cursor: pointer;
-            margin-right: 10px; /* Add spacing between images */
+            margin-right: 10px;
+            margin-left: 5px;
         }
 
         @keyframes fadeInOut {
@@ -55,12 +61,12 @@
 
         .recipe-links {
             text-align: center;
-            margin: 20px 0; /* Added margin for better spacing */
+            margin: 20px 0; 
         }
 
         .recipe-link {
             display: inline-block;
-            background-color: #4caf50;
+            background: linear-gradient(to left, #ffb476, #ff74e3);
             color: #fff;
             padding: 10px 20px;
             margin: 10px;
@@ -115,53 +121,55 @@
 
     <div class="personal-goals">
         <h2>Your Personal Goals</h2>
-        <p>Start your journey to a healthier lifestyle with delicious and nutritious recipes.</p>
+        <p>Start your journey to a healthier lifestyle with Ahsen recipes.</p>
     </div>
 
     <div class="slideshow-container">
         <div class="mySlides">
-            <img src="https://placekitten.com/200/200" alt="Healthy Salad">
-            <img src="https://placekitten.com/201/201" alt="Fruit Smoothie">
+            <img src="https://i.pinimg.com/736x/d8/17/2a/d8172af8e9df8b1003f157947b26e1a2.jpg" alt="Healthy Salad">
+            <img src="https://i.pinimg.com/564x/d9/09/36/d90936a3fa487e167083b812652cb12b.jpg" alt="Fruit Smoothie">
+        </div>
+        <div class="mySlides">
+            <img src="https://i.pinimg.com/564x/4f/a5/78/4fa5785a5feb1c9f1ea0c8a72fea0bd2.jpg" alt="Healthy Salad">
+            <img src="https://i.pinimg.com/564x/75/79/c8/7579c82956572604c5cf36f0a3d16979.jpg" alt="Fruit Smoothie">
         </div>
     </div>
 
     <div class="recipe-links">
         <a href="#salad" class="recipe-link">Healthy Salads</a>
         <a href="#smoothie" class="recipe-link">Fruit Smoothies</a>
-        <!-- Add more links as needed -->
     </div>
 
     <div class="recipes-section">
         <div class="recipe-card">
-            <img src="https://placekitten.com/200/200" alt="Healthy Salad">
+            <img src="https://i.pinimg.com/564x/91/15/5d/91155d417c61ed5fa601bf0b63250aeb.jpg" alt="Healthy Salad">
             <div class="recipe-card-info">
-                <h3>Healthy Salad</h3>
-                <p>Delicious and nutritious salad packed with fresh veggies.</p>
+                <h3>Salad toast</h3>
+                <p>Delicious and nutritious salad toast packed with fresh veggies and fresh cream cheese</p>
             </div>
         </div>
 
         <div class="recipe-card">
-            <img src="https://placekitten.com/201/201" alt="Fruit Smoothie">
+            <img src="https://i.pinimg.com/564x/5b/62/6c/5b626cfa9b8a3bf58fa97d7137e12899.jpg" alt="Fruit Smoothie">
             <div class="recipe-card-info">
-                <h3>Fruit Smoothie</h3>
-                <p>Refreshing and tasty fruit smoothie to kickstart your day.</p>
-            </div>
-        </div>
-        <!-- Add more recipe cards as needed -->
-
-        <div class="recipe-card">
-            <img src="https://placekitten.com/202/202" alt="Recipe 3">
-            <div class="recipe-card-info">
-                <h3>Recipe 3</h3>
-                <p>Description for Recipe 3.</p>
+                <h3>Blueberry French Toast</h3>
+                <p>Refreshing and tasty blueberry french toasts with perfectly balanced carbs and calories!</p>
             </div>
         </div>
 
         <div class="recipe-card">
-            <img src="https://placekitten.com/203/203" alt="Recipe 4">
+            <img src="https://i.pinimg.com/564x/54/b3/a5/54b3a52fbee28c2dc7fd43d0d77df52f.jpg" alt="Recipe 3">
             <div class="recipe-card-info">
-                <h3>Recipe 4</h3>
-                <p>Description for Recipe 4.</p>
+                <h3>Protein bowl</h3>
+                <p>Bowl full of nutrients, perfect for the ones who need to fullfill their daily protein goal.</p>
+            </div>
+        </div>
+
+        <div class="recipe-card">
+            <img src="https://i.pinimg.com/564x/0a/3d/fe/0a3dfedb18e0329a5d40a3bc8043086f.jpg" alt="Recipe 4">
+            <div class="recipe-card-info">
+                <h3>Breakfast bowl</h3>
+                <p>Healthy breakfast bowl to kickstart your day!</p>
             </div>
         </div>
     </div>
@@ -181,7 +189,7 @@
                 slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = "flex";
-            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+            setTimeout(showSlides, 4000); // Change slide every 5 seconds
         }
     </script>
 </body>

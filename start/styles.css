@@ -18,12 +18,12 @@ body {
 #brand {
   text-align: center;
   cursor: pointer;
-  display: flex; /* Use flexbox for better vertical alignment */
-  align-items: center; /* Center vertically */
+  display: flex;
+  align-items: center;
 }
 
 #brand img {
-  width: 50%; /* Adjust this percentage as needed */
+  width: 40%;
   max-width: 700px;
   height: auto;
   transition: 0.2s;
