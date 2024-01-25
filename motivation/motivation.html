@@ -1,138 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #ffb476, #ff74e3);
-        }
-
-        header {
-            background-color: #b3cffe;
-            color: #fff;
-            text-align: center;
-            padding: 1em; /* Adjusted padding for a smaller header */
-            font-size: 1em; /* Adjusted font size */
-            font-weight: 400;
-        }
-
-        .motivation-text {
-            font-size: 20px;
-            font-weight: 400;
-        }
-
-        .videos-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 20px;
-            color: antiquewhite;
-        }
-
-        .video-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .video-card:hover {
-            transform: scale(1.05);
-        }
-
-        .video-card iframe {
-            width: 100%;
-            height: 200px;
-        }
-
-        .description {
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+    />
+    <link rel="stylesheet" href="motivation.css" />
+  </head>
+  <body>
     <header>
-        <h1>Motivation</h1>
-        <p class="motivation-text">If you're ever in need of a bit of motivation</p>
+      <h1>Motivation</h1>
+      <p class="motivation-text">
+        If you're ever in need of a bit of motivation
+      </p>
     </header>
 
     <div class="videos-container">
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/yUjPFCosmNA?si=co49NduO3f-MsUMF"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">"Never stray from the Way- Lao Tzu"</div>
+      </div>
 
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/yUjPFCosmNA?si=co49NduO3f-MsUMF"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"Never stray from the Way- Lao Tzu"</div>
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/F-0nGGenLC4?si=iUdjBfaTU22Kbr0-"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">
+          "The best revenge is creating a better life for yourself"
         </div>
+      </div>
 
-
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/F-0nGGenLC4?si=iUdjBfaTU22Kbr0-"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"The best revenge is creating a better life for yourself"</div>
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/3Qptyt0-S9U?si=eb_kXaYejJiIcWvN"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">
+          "Dare to live by letting go."- Tom Althouse
         </div>
- 
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/3Qptyt0-S9U?si=eb_kXaYejJiIcWvN"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"Dare to live by letting go."- Tom Althouse </div>
+      </div>
+
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/SPrSNR7TcaM?si=qXK48qCgcoXG1wmb"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">
+          "You will never live if you are looking for the meaning of life." -
+          Camus
         </div>
+      </div>
 
-
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/SPrSNR7TcaM?si=qXK48qCgcoXG1wmb"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"You will never live if you are looking for the meaning of life." - Camus</div>
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/XbhecuoEgxs?si=2deool9ae7IFtWl3"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">
+          "Life isnt about finding yourself. It's about creating yourself."
         </div>
+      </div>
 
-
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/XbhecuoEgxs?si=2deool9ae7IFtWl3"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"Life isnt about finding yourself. It's about creating yourself."</div>
-        </div>
-
-        <div class="video-card">
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/H5ExSyGTgt4?si=VI_uttnLK6wTwIp-"
-                frameborder="0"
-                allowfullscreen
-            ></iframe>
-            <div class="description">"Progress is impossible without change"</div>
-        </div>
+      <div class="video-card">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/H5ExSyGTgt4?si=VI_uttnLK6wTwIp-"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <div class="description">"Progress is impossible without change"</div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

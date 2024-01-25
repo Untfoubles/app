@@ -1,196 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #ffb476, #ff74e3);
-        }
-
-        header {
-            background-color: #b3cffe;
-            color: #fff;
-            text-align: center;
-            padding: 1em; /* Adjusted padding for a smaller header */
-            font-size: 1em; /* Adjusted font size for better visibility on smaller screens */
-            font-weight: 400;
-        }
-        H2 {
-            font-style: italic;
-            color: #c7dcff;
-
-        }
-        .personal-goals {
-            text-align: center;
-            padding: 20px;
-            color: antiquewhite;
-        }
-
-        .slideshow-container {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .mySlides {
-            display: flex;
-            animation: fadeInOut 8s infinite alternate;
-        }
-
-        .mySlides img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-right: 10px;
-            margin-left: 5px;
-        }
-
-        @keyframes fadeInOut {
-            0%, 100% {
-                opacity: 0.4;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
-        .recipe-links {
-            text-align: center;
-            margin: 20px 0; 
-        }
-
-        .recipe-link {
-            display: inline-block;
-            background: linear-gradient(to left, #ffb476, #ff74e3);
-            color: #fff;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-
-        .recipe-link:hover {
-            background-color: #45a049;
-        }
-
-        .recipes-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted minmax value for better responsiveness */
-            gap: 20px;
-            margin: 20px;
-        }
-
-        .recipe-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .recipe-card:hover {
-            transform: scale(1.05);
-        }
-
-        .recipe-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px 10px 0 0;
-        }
-
-        .recipe-card-info {
-            padding: 15px;
-        }
-
-        h3, p {
-            margin: 0;
-        }
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="meals.css" />
+    <script src="./meals.js"></script>
+  </head>
+  <body>
     <header>
-        <h1>Feel good meals</h1>
+      <h1>Feel good meals</h1>
     </header>
 
     <div class="personal-goals">
-        <h2>Your Personal Goals</h2>
-        <p>Start your journey to a healthier lifestyle with Ahsen recipes.</p>
+      <h2>Your Personal Goals</h2>
+      <p>Start your journey to a healthier lifestyle with Ahsen recipes.</p>
     </div>
 
     <div class="slideshow-container">
-        <div class="mySlides">
-            <img src="https://i.pinimg.com/736x/d8/17/2a/d8172af8e9df8b1003f157947b26e1a2.jpg" alt="Healthy Salad">
-            <img src="https://i.pinimg.com/564x/d9/09/36/d90936a3fa487e167083b812652cb12b.jpg" alt="Fruit Smoothie">
-        </div>
-        <div class="mySlides">
-            <img src="https://i.pinimg.com/564x/4f/a5/78/4fa5785a5feb1c9f1ea0c8a72fea0bd2.jpg" alt="Healthy Salad">
-            <img src="https://i.pinimg.com/564x/75/79/c8/7579c82956572604c5cf36f0a3d16979.jpg" alt="Fruit Smoothie">
-        </div>
+      <div class="mySlides">
+        <img
+          src="https://i.pinimg.com/736x/d8/17/2a/d8172af8e9df8b1003f157947b26e1a2.jpg"
+          alt="Healthy Salad"
+        />
+        <img
+          src="https://i.pinimg.com/564x/d9/09/36/d90936a3fa487e167083b812652cb12b.jpg"
+          alt="Fruit Smoothie"
+        />
+      </div>
+      <div class="mySlides">
+        <img
+          src="https://i.pinimg.com/564x/4f/a5/78/4fa5785a5feb1c9f1ea0c8a72fea0bd2.jpg"
+          alt="Healthy Salad"
+        />
+        <img
+          src="https://i.pinimg.com/564x/75/79/c8/7579c82956572604c5cf36f0a3d16979.jpg"
+          alt="Fruit Smoothie"
+        />
+      </div>
     </div>
 
     <div class="recipe-links">
-        <a href="#salad" class="recipe-link">Healthy Salads</a>
-        <a href="#smoothie" class="recipe-link">Fruit Smoothies</a>
+      <a href="#salad" class="recipe-link">Healthy Salads</a>
+      <a href="#smoothie" class="recipe-link">Fruit Smoothies</a>
     </div>
 
     <div class="recipes-section">
-        <div class="recipe-card">
-            <img src="https://i.pinimg.com/564x/91/15/5d/91155d417c61ed5fa601bf0b63250aeb.jpg" alt="Healthy Salad">
-            <div class="recipe-card-info">
-                <h3>Salad toast</h3>
-                <p>Delicious and nutritious salad toast packed with fresh veggies and fresh cream cheese</p>
-            </div>
+      <div class="recipe-card">
+        <img
+          src="https://i.pinimg.com/564x/91/15/5d/91155d417c61ed5fa601bf0b63250aeb.jpg"
+          alt="Healthy Salad"
+        />
+        <div class="recipe-card-info">
+          <h3>Salad toast</h3>
+          <p>
+            Delicious and nutritious salad toast packed with fresh veggies and
+            fresh cream cheese
+          </p>
         </div>
+      </div>
 
-        <div class="recipe-card">
-            <img src="https://i.pinimg.com/564x/5b/62/6c/5b626cfa9b8a3bf58fa97d7137e12899.jpg" alt="Fruit Smoothie">
-            <div class="recipe-card-info">
-                <h3>Blueberry French Toast</h3>
-                <p>Refreshing and tasty blueberry french toasts with perfectly balanced carbs and calories!</p>
-            </div>
+      <div class="recipe-card">
+        <img
+          src="https://i.pinimg.com/564x/5b/62/6c/5b626cfa9b8a3bf58fa97d7137e12899.jpg"
+          alt="Fruit Smoothie"
+        />
+        <div class="recipe-card-info">
+          <h3>Blueberry French Toast</h3>
+          <p>
+            Refreshing and tasty blueberry french toasts with perfectly balanced
+            carbs and calories!
+          </p>
         </div>
+      </div>
 
-        <div class="recipe-card">
-            <img src="https://i.pinimg.com/564x/54/b3/a5/54b3a52fbee28c2dc7fd43d0d77df52f.jpg" alt="Recipe 3">
-            <div class="recipe-card-info">
-                <h3>Protein bowl</h3>
-                <p>Bowl full of nutrients, perfect for the ones who need to fullfill their daily protein goal.</p>
-            </div>
+      <div class="recipe-card">
+        <img
+          src="https://i.pinimg.com/564x/54/b3/a5/54b3a52fbee28c2dc7fd43d0d77df52f.jpg"
+          alt="Recipe 3"
+        />
+        <div class="recipe-card-info">
+          <h3>Protein bowl</h3>
+          <p>
+            Bowl full of nutrients, perfect for the ones who need to fullfill
+            their daily protein goal.
+          </p>
         </div>
+      </div>
 
-        <div class="recipe-card">
-            <img src="https://i.pinimg.com/564x/0a/3d/fe/0a3dfedb18e0329a5d40a3bc8043086f.jpg" alt="Recipe 4">
-            <div class="recipe-card-info">
-                <h3>Breakfast bowl</h3>
-                <p>Healthy breakfast bowl to kickstart your day!</p>
-            </div>
+      <div class="recipe-card">
+        <img
+          src="https://i.pinimg.com/564x/0a/3d/fe/0a3dfedb18e0329a5d40a3bc8043086f.jpg"
+          alt="Recipe 4"
+        />
+        <div class="recipe-card-info">
+          <h3>Breakfast bowl</h3>
+          <p>Healthy breakfast bowl to kickstart your day!</p>
         </div>
+      </div>
     </div>
-
-    <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1;
-            }
-            slides[slideIndex - 1].style.display = "flex";
-            setTimeout(showSlides, 4000); // Change slide every 5 seconds
-        }
-    </script>
-</body>
+  </body>
 </html>
