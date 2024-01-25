@@ -1,28 +1,22 @@
-// Retrieve stored journal entries on page load
 window.onload = function () {
+   // Haal de opgeslagen dagboekvermeldingen op uit de lokale opslag van de browser
    const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
    const journalEntries = document.getElementById('journalEntries');
 
+   // bij elk opgeslagen dagboekvermelding...
    storedEntries.forEach(entry => {
+      // Maakt een nieuwe html-element voor de tekst en voegt het toe aan de pagina
       const entryElement = createEntryElement(entry.text, entry.timestamp);
       journalEntries.appendChild(entryElement);
    });
 };
 
+// Functie om een html-element voor een dagboekvermelding te maken
 function createEntryElement(text, timestamp) {
+   // maakt een nieuw <div> element
    const entryElement = document.createElement('div');
-   entryElement.classList.add('entry');
-
-   const deleteBtn = document.createElement('button');
-   deleteBtn.classList.add('delete-btn');
-   deleteBtn.textContent = 'Delete';
-   deleteBtn.addEventListener('click', () => {
-      deleteEntry(entryElement, text, timestamp);
-   });
-
-   entryElement.innerHTML = `<p>${text}</p><p class="timestamp">${timestamp}</p>`;
-   entryElement.appendChild(deleteBtn);
-
+   // voegt de tekst en timestamp toe aan het element
+   entryElement.innerHTML = `<p>${text}</p><span>${timestamp}</span>`;
    return entryElement;
 }
 
