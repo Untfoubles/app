@@ -1,5 +1,5 @@
 window.onload = function () {
-   // Haal de opgeslagen dagboekvermeldingen op uit de lokale opslag van de browser
+   // haalt de opgeslagen dagboekvermeldingen op uit de lokale opslag van mijn browser
    const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
    const journalEntries = document.getElementById('journalEntries');
 
@@ -28,8 +28,10 @@ function submitJournal(event) {
 
    const entryElement = createEntryElement(entryText, timestamp);
 
+   entryElement.classList.add('journal-entry');
+   
    document.getElementById('journalEntries').appendChild(entryElement);
-
+   
 // haalt de opgeslagen dagboektekst op uit de lokale opslag van mijn browser
 const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
 
@@ -40,14 +42,14 @@ storedEntries.push({ text: entryText, timestamp: timestamp });
 localStorage.setItem('journalEntries', JSON.stringify(storedEntries));
 
 
-   // Clear de textarea na verzending
+   // cleart de tekstarea na verzending
    document.getElementById('journalEntry').value = '';
 }
 
 function deleteEntry(entryElement, text, timestamp) {
    entryElement.remove();
 
-   // Remove entry from localStorage
+   // verwijderd toegevoegde text van localStorage
    const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
    const updatedEntries = storedEntries.filter(entry => entry.text !== text || entry.timestamp !== timestamp);
    localStorage.setItem('journalEntries', JSON.stringify(updatedEntries));

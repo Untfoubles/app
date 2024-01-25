@@ -1,80 +1,78 @@
-// Load custom habits from local storage on page load
+// laden van extra gewoontes vanuit mijn lokale opslag bij het laden van de pagina
 window.onload = function () {
-    loadCustomHabits();
+   loadCustomHabits();
 };
 
 function addSelectedHabit(habitName) {
-    // You can add your logic here to handle the selected habit
-    console.log('Selected Habit:', habitName);
+   // Hier kun je je logica toevoegen om met de geselecteerde gewoonte om te gaan
+   console.log('Geselecteerde Gewoonte:', habitName);
 }
 
 function addCustomHabit() {
-    var customHabitName = document.getElementById('customHabitName').value;
-    var customHabitImage = document.getElementById('customHabitImage').files[0];
+   var customHabitName = document.getElementById('customHabitName').value;
+   var customHabitImage = document.getElementById('customHabitImage').files[0];
 
-    if (customHabitName.trim() !== '' && customHabitImage) {
-        // Save the custom habit to local storage
-        saveCustomHabit(customHabitName, customHabitImage);
+   if (customHabitName.trim() !== '' && customHabitImage) {
+       // de extra gewoontes opslaan in lokale opslag
+       saveCustomHabit(customHabitName, customHabitImage);
 
-        // Load and display all custom habits
-        loadCustomHabits();
+       // Laden en weergeven van alle aangepaste gewoontes
+       loadCustomHabits();
 
-        // Clear the input fields
-        document.getElementById('customHabitName').value = '';
-        document.getElementById('customHabitImage').value = '';
-    }
+       // invoervelden leegmaken
+       document.getElementById('customHabitName').value = '';
+       document.getElementById('customHabitImage').value = '';
+   }
 }
 
 function saveCustomHabit(habitName, habitImage) {
-    // Get existing custom habits from local storage
-    var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
+   // bestaande gewoontes ophalen uit de lokale opslag
+   var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
 
-    // Create a FileReader to read the selected image
-    var reader = new FileReader();
-    reader.onload = function (event) {
-        // Add the new custom habit with name and base64-encoded image data
-        customHabits.push({ name: habitName, image: event.target.result });
+   // Een FileReader maken om de geselecteerde afbeelding te lezen
+   var reader = new FileReader();
+   reader.onload = function (event) {
+       customHabits.push({ name: habitName, image: event.target.result });
+       // bijgewerkte aangepaste gewoontes opslaan in mijn lokale opslag
+       localStorage.setItem('customHabits', JSON.stringify(customHabits));
+   };
 
-        // Save the updated custom habits to local storage
-        localStorage.setItem('customHabits', JSON.stringify(customHabits));
-    };
-
-    // Read the selected image as a data URL
-    reader.readAsDataURL(habitImage);
+   // de geselecteerde afbeelding als een data-URL lezen
+   reader.readAsDataURL(habitImage);
 }
 
 function loadCustomHabits() {
-    // Get custom habits from local storage
-    var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
+   // aangepaste gewoontes ophalen uit de lokale opslag
+   var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
 
-    // Display custom habits
-    var customHabitList = document.getElementById('customHabitList');
-    customHabitList.innerHTML = '';
+   // aangepaste gewoontes weergeven
+   var customHabitList = document.getElementById('customHabitList');
+   customHabitList.innerHTML = '';
 
-    customHabits.forEach(function (habit, index) {
-        if (habit && habit.name) {
-            var customHabitDiv = document.createElement('div');
-            customHabitDiv.classList.add('custom-habit');
-            customHabitDiv.innerHTML = `
-                <img src="${habit.image}" alt="Custom Habit Image">
-                <p>${habit.name}</p>
-                <button class="delete-button" onclick="deleteCustomHabit(${index})">Delete</button>
-            `;
-            customHabitList.appendChild(customHabitDiv);
-        }
-    });
+   customHabits.forEach(function (habit, index) {
+       if (habit && habit.name) {
+           var customHabitDiv = document.createElement('div');
+           customHabitDiv.classList.add('custom-habit');
+           customHabitDiv.innerHTML = `
+               <img src="${habit.image}" alt="Aangepaste Gewoonte Afbeelding">
+               <p>${habit.name}</p>
+               <button class="delete-button" onclick="deleteCustomHabit(${index})">Verwijderen</button>
+           `;
+           customHabitList.appendChild(customHabitDiv);
+       }
+   });
 }
 
 function deleteCustomHabit(index) {
-    // Get existing custom habits from local storage
-    var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
+   // bestaande aangepaste gewoontes ophalen uit de lokale opslag
+   var customHabits = JSON.parse(localStorage.getItem('customHabits')) || [];
 
-    // Remove the custom habit at the specified index
-    customHabits.splice(index, 1);
+   // de aangepaste gewoonte op de opgegeven index verwijderen
+   customHabits.splice(index, 1);
 
-    // Save the updated custom habits to local storage
-    localStorage.setItem('customHabits', JSON.stringify(customHabits));
+   // de bijgewerkte aangepaste gewoontes opslaan in de lokale opslag
+   localStorage.setItem('customHabits', JSON.stringify(customHabits));
 
-    // Load and display all custom habits
-    loadCustomHabits();
+   // laden en weergeven van alle aangepaste gewoontes
+   loadCustomHabits();
 }
