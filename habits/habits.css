@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffb476, #ff74e3);
+    color: #333;
+}
+
+header {
+    background-color: #b3cffe;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}
+
+.habit-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.habit, .custom-habit {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #ff4b4b;
+    color: #fff;
+    border: none;
+    padding: 0.2em 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #d22f2f;
+}
+
+.habit:hover, .custom-habit:hover {
+    background-color: #f0f0f0;
+}
+
+.habit img, .custom-habit img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.motivation {
+    font-size: 0.8em;
+    color: #666;
+}
+
+#customHabitForm {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 1em;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 0.5em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3367d6;
+}
+
+#customHabitList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.custom-habit {
+    max-width: 150px;
+    position: relative;
+    margin-bottom: 1em;
+}
