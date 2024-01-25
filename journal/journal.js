@@ -30,12 +30,17 @@ function submitJournal(event) {
 
    document.getElementById('journalEntries').appendChild(entryElement);
 
-   // Save entry to localStorage
-   const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
-   storedEntries.push({ text: entryText, timestamp: timestamp });
-   localStorage.setItem('journalEntries', JSON.stringify(storedEntries));
+// haalt de opgeslagen dagboektekst op uit de lokale opslag van mijn browser
+const storedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
 
-   // Clear the textarea after submission
+//voegt de nieuwe dagboektekst toe aan de lijst van opgeslagen vermeldingen
+storedEntries.push({ text: entryText, timestamp: timestamp });
+
+// slaat de lijst van dagboekvermeldingen op in de lokale opslag van mijn browser
+localStorage.setItem('journalEntries', JSON.stringify(storedEntries));
+
+
+   // Clear de textarea na verzending
    document.getElementById('journalEntry').value = '';
 }
 
