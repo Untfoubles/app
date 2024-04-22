@@ -44,7 +44,7 @@ h2 {
     color: inherit;
     border-radius: 8px;
     cursor: pointer;
-    color: rgb(165, 240, 231);
+    color: rgb(229, 53, 123);
 }
 
 .container.active,
@@ -54,19 +54,19 @@ h2 {
 }
 
 #plan {
-    background: url("https://i.pinimg.com/564x/92/7f/24/927f24c48cd04b6561a2646a702d4f5b.jpg") center/cover; /* Replace with actual image URL */
+    background: url("https://wallpapercave.com/wp/wp9429116.jpg") center/cover; 
 }
 
 #habits {
-    background: url("https://i.pinimg.com/564x/38/54/5e/38545e13c612e0a6f180beeafd12bff7.jpg") center/cover; /* Replace with actual image URL */
+    background: url("https://wallpapercave.com/wp/wp9429116.jpg") center/cover; 
 }
 
 #meals {
-    background: url("https://i.pinimg.com/736x/2e/79/b2/2e79b2274973d663eba418a27e90931d.jpg") center/cover; /* Replace with actual image URL */
+    background: url("https://wallpapercave.com/wp/wp9429116.jpg") center/cover; 
 }
 
 #motivation {
-    background: url("https://i.pinimg.com/564x/be/e1/ec/bee1ece779b9eae59b57ae67d6f40a26.jpg") center/cover; /* Replace with actual image URL */
+    background: url("https://wallpapercave.com/wp/wp9429116.jpg") center/cover; 
 }
 
 .help-link {
